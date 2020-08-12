@@ -2,12 +2,11 @@
     main();
 
     function main() {
-        if (location.search.length > 0) {
+        if (post_data.length > 0) {
             store_param();
-            location.href = "index.html";
+            location.href = "index.php";
         }
         else {
-
             new Vue({
                 el: '#app',
                 vuetify: new Vuetify(),
@@ -31,15 +30,10 @@
         return ret;
     }
 
-    function get_score() {
-
-    }
-
     function store_param() {
-        let param = location.search;
         let result_new = []
-        if (param.length > 0) {
-            result_new = JSON.parse(decodeURI(param.substring(1)));
+        if (post_data.length > 0) {
+            result_new = JSON.parse(decodeURI(post_data));
         }
         result_prev = []
         if (localStorage.getItem('result_data')) {

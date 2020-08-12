@@ -17,6 +17,16 @@
                 <v-data-table :headers="headers" :items="song_result" items-per-page="-1" class="elevation-1"></v-data-table>
             </v-app>
         </div>
+        <script type="text/javascript">
+            var post_data = '<?php 
+                function escape($s){
+                    $s = str_replace("\\","\\\\",$s);
+                    $s = str_replace("'","\'",$s);
+                    return $s;
+                }
+                echo escape($_POST["result"]);
+            ?>';
+        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
