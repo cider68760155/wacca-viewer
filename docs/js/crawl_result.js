@@ -1,4 +1,5 @@
 (function () {
+    let site_url = "http://cgi1.plala.or.jp/~cider/wacca-viewer/";
     main();
 
     function crawl_result() {
@@ -48,6 +49,6 @@
     function main() {
         let song_data = crawl_result();
         console.log(JSON.stringify(song_data));
-        postForm("http://cgi1.plala.or.jp/~cider/wacca-viewer/update/index.php", JSON.stringify(song_data));
+        postForm(site_url + "update/index.php", JSON.stringify(song_data));
     }
 })();
