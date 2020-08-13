@@ -1,0 +1,1 @@
+javascript: (function (d, s) { s = d.createElement('script'); s.src = 'https://cider68760155.github.io/wacca-viewer/js/crawl_result.js'; d.body.appendChild(s); })(document)
