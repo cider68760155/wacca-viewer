@@ -4,7 +4,7 @@ import json
 
 from urls import chrome_path
 
-DIFFICULTY = ['NOMAL', 'HARD', 'EXPERT', 'INFERNO']
+DIFFICULTY = ['NORMAL', 'HARD', 'EXPERT', 'INFERNO']
 
 try:
     option = webdriver.ChromeOptions()
