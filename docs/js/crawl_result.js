@@ -3,7 +3,7 @@
     main();
 
     function crawl_result() {
-        DIFFICULTY = ['NOMAL', 'HARD', 'EXPERT', 'INFERNO']
+        DIFFICULTY = ['NORMAL', 'HARD', 'EXPERT', 'INFERNO']
         let ret = [];
         for (let i = 0; i < $(".playdata__score-list__song-info").length; ++i) {
             let title = $('.playdata__score-list__song-info:eq(' + i + ') .playdata__score-list__song-info__name').text();
