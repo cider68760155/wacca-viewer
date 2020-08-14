@@ -28,7 +28,7 @@ try:
         for j, lv in enumerate(level[i]):
             ret[i]['level_' + DIFFICULTY[j]] = int(lv)
     print(ret)
-    with open('./data/songs.json', 'w') as f:
+    with open('./docs/data/songs.json', 'w') as f:
         json.dump(ret, f, ensure_ascii=False)
 finally:
     driver.quit()
