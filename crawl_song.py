@@ -2,14 +2,14 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import json
 
-from urls import chrome_path
+import chromedriver_binary
 
 DIFFICULTY = ['NORMAL', 'HARD', 'EXPERT', 'INFERNO']
 
 try:
     option = webdriver.ChromeOptions()
     option.add_argument('--headless')
-    driver = webdriver.Chrome(executable_path=chrome_path, options=option)
+    driver = webdriver.Chrome(options=option)
     driver.get('https://wacca.marv.jp/music/')
     num_new = len(driver.find_elements_by_class_name('song'))
     driver.find_element_by_xpath('//a[@data-s="all"]').click()
