@@ -26,7 +26,7 @@ try:
         ret[i]['title'] = title[i]
         ret[i]['category'] = category[i]
         for j, lv in enumerate(level[i]):
-            ret[i]['level_' + DIFFICULTY[j]] = int(lv)
+            ret[i]['level_' + DIFFICULTY[j]] = lv
     print(ret)
     with open('./docs/data/songs.json', 'w') as f:
         json.dump(ret, f, ensure_ascii=False)
