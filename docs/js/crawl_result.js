@@ -1,5 +1,5 @@
 (function () {
-    let site_url = "http://cgi1.plala.or.jp/~cider/wacca-viewer/";
+    let site_url = "http://cider01.php.xdomain.jp/wacca-viewer/";
     main();
 
     function crawl_result() {
